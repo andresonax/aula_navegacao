@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'Telas/tela_categoria.dart';
  
 void main() => runApp(AppCardapio());
- 
+ // style: Theme.of(context).textTheme.titleSmall, vai no categoria
 class AppCardapio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
