@@ -20,7 +20,7 @@ class CategoriaItem extends StatelessWidget {
     //   })
     // );
 
-    Navigator.of(context).pushNamed(Rotas.PRODUTOS, arguments: categoria);
+    Navigator.of(context).pushNamed(Rotas.PRODUTOS,  arguments: {'id': categoria.id, 'title': categoria.titulo});
   }
   
   @override
@@ -29,7 +29,7 @@ class CategoriaItem extends StatelessWidget {
       onTap: () => selecionarCategoria(context),
       child: Container(
           padding: EdgeInsets.all(15),
-          child: Text(categoria.titulo,),
+          child: Text(categoria.titulo),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
             gradient: LinearGradient(

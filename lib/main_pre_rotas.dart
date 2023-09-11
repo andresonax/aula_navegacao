@@ -1,4 +1,5 @@
 import 'package:aulas_navegacao/Telas/tela_produtos.dart';
+import 'package:aulas_navegacao/utils/rotas.dart';
 import 'package:flutter/material.dart';
 
 //depois de programar a tela
@@ -21,7 +22,11 @@ class AppCardapio extends StatelessWidget {
           ) 
         )
       ),
-      home: TelaCategorias(),
+      //home: TelaCategorias(),
+      routes: { 
+         Rotas.HOME : (ctx) => TelaCategorias(),
+         Rotas.PRODUTOS : (ctx) => TelaProdutos()
+        }
       
     );
   }

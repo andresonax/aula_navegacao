@@ -13,11 +13,11 @@ class CategoriaItem extends StatelessWidget {
 
   void selecionarCategoria(BuildContext context){
     //PROGRAMAR
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (_){
-        return TelaProdutos(categoria);
-      })
-    );
+    // Navigator.of(context).push(
+    //   MaterialPageRoute(builder: (_){
+    //     return TelaProdutos(categoria);
+    //   })
+    // );
   }
   
   @override
