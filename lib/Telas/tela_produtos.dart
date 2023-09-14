@@ -3,8 +3,7 @@ import 'package:aulas_navegacao/models/produtos.dart';
 import 'package:flutter/material.dart';
 
 class TelaProdutos extends StatefulWidget {
-  
-  static const routeName = '/category-meals';
+
   final List<Produto> produtosValidos;
   TelaProdutos(this.produtosValidos);
 
@@ -21,8 +20,9 @@ class _TelaProdutosState extends State<TelaProdutos> {
     // TODO: implement didChangeDependencies
     final argumentosRota =
         ModalRoute.of(context)!.settings.arguments as Map<String, String>;
-    tituloCategoria = argumentosRota['title']!;
+    final tituloCategoria = argumentosRota['title']!;
     final categoryId = argumentosRota['id'];
+    //montando vetor de produtos
     displayProdutos = widget.produtosValidos.where((produto) {
       return produto.categories.contains(categoryId);
     }).toList();
