@@ -19,6 +19,7 @@ class CategoriaItem extends StatelessWidget {
     //     return TelaProdutos(categoria);
     //   })
     // );
+    
 
     Navigator.of(context).pushNamed(Rotas.PRODUTOS,  arguments: {'id': categoria.id, 'title': categoria.titulo});
   }

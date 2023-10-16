@@ -1,9 +1,9 @@
-import 'package:aulas_navegacao/componentes/produto_item.dart';
-import 'package:aulas_navegacao/models/produtos.dart';
 import 'package:flutter/material.dart';
+import '../componentes/produto_item.dart';
+import '../models/produtos.dart';
 
 class TelaProdutos extends StatefulWidget {
-
+  static const routeName = '/produtos';
   final List<Produto> produtosValidos;
   TelaProdutos(this.produtosValidos);
 
@@ -15,19 +15,26 @@ class _TelaProdutosState extends State<TelaProdutos> {
   String? tituloCategoria;
   List<Produto>? displayProdutos;
 
-@override
+  @override
   void didChangeDependencies() {
     // TODO: implement didChangeDependencies
-    final argumentosRota =
+    final routeArgs =
         ModalRoute.of(context)!.settings.arguments as Map<String, String>;
-    final tituloCategoria = argumentosRota['title']!;
-    final categoryId = argumentosRota['id'];
-    //montando vetor de produtos
-    displayProdutos = widget.produtosValidos.where((produto) {
-      return produto.categories.contains(categoryId);
+    tituloCategoria = routeArgs['title']!;
+    final categoryId = routeArgs['id'];
+    displayProdutos = widget.produtosValidos.where((meal) {
+      return meal.categories.contains(categoryId);
     }).toList();
     super.didChangeDependencies();
   }
+
+  // void _removeMeal(String mealId) {
+  //   setState(() {
+  //     displayedMeals!.removeWhere((meal) => meal.id == mealId);
+  //   });
+  // }
+
+  // final String categoryId;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +48,7 @@ class _TelaProdutosState extends State<TelaProdutos> {
             duration: displayProdutos![index].duration,
             cost: displayProdutos![index].cost,
           );
-          //return Text(displayProdutos[index].title);
+          // return Text(displayedMeals[index].title);
         },
         itemCount: displayProdutos!.length,
       ),
