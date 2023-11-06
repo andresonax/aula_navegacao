@@ -3,52 +3,52 @@ import '../models/categorias.dart';
 
 const mockCategories = [
   Categoria(
-    id: 'c1',
+    id: 1,
     titulo: 'Italiano',
     color: Colors.purple,
   ),
   Categoria(
-    id: 'c2',
+    id: 2,
     titulo: 'Rápido & Fácil',
     color: Colors.red,
   ),
   Categoria(
-    id: 'c3',
+    id: 3,
     titulo: 'Hamburgers',
     color: Colors.orange,
   ),
   Categoria(
-    id: 'c4',
+    id: 4,
     titulo: 'Alemã',
     color: Colors.amber,
   ),
   Categoria(
-    id: 'c5',
+    id: 5,
     titulo: 'Leve & Saudável',
     color: Colors.indigo,
   ),
   Categoria(
-    id: 'c6',
+    id: 6,
     titulo: 'Exótica',
     color: Colors.green,
   ),
   Categoria(
-    id: 'c7',
+    id: 7,
     titulo: 'Café da Manhã',
     color: Colors.lightBlue,
   ),
   Categoria(
-    id: 'c8',
+    id: 8,
     titulo: 'Asiática',
     color: Colors.lightGreen,
   ),
   Categoria(
-    id: 'c9',
+    id: 9,
     titulo: 'Francesa',
     color: Colors.pink,
   ),
   Categoria(
-    id: 'c10',
+    id: 10,
     titulo: 'Verão',
     color: Colors.teal,
   ),
